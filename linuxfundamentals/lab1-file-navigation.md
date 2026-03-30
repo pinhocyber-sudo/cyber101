@@ -1,8 +1,8 @@
 # Linux Fundamentals 1
 
 **Platform:** TryHackMe  
-**Path:** Cyber101 
-**Module:** Linux Fundamentals 
+**Path:** Cyber101  
+**Module:** Linux Fundamentals  
 **Difficulty:** Easy  
 
 ---
