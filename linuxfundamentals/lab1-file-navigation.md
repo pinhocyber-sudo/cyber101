@@ -73,10 +73,10 @@ find . -type f -name "*.txt" -exec grep "hello" {} \;
 ```
 ### Step 4 - [Operators]
 
-& - Allows you to run commands on your background
-&& - Combines multiple commands
-> - Allows you to take the output of a command and direct it elsewhere
->> - Same of > but nothing is overwrited
+"&" - Allows you to run commands on your background
+"&&" - Combines multiple commands
+">" - Allows you to take the output of a command and direct it elsewhere
+">>" - Same of > but nothing is overwrited
 
 ## Why it matters
 
