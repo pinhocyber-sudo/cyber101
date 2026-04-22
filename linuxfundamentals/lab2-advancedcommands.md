@@ -31,7 +31,7 @@ The primary method for server administration. SSH ensures that all data is trans
 ssh tryhackme@10.10.x.x
 password
 ```
-### Step 2 - [Advanced File System Administration]
+### Step 2 - [Core File System Administration]
 Efficiency in managing system objects and directory structures.
 ```bash
 touch web_config.txt          # File creation
@@ -40,7 +40,7 @@ cp logs.txt /tmp/             # Data migration to volatile storage
 mv old_data.txt archival/     # File relocation and renaming
 rm -rf sensitive_data/        # Recursive deletion (use with caution in production)
 ```
-### Step 3 - [Core File System Administration]
+### Step 3 - [Permissions Analysis]
 Understanding file attributes and switching user contexts to perform administrative tasks.
 ```bash
 ls -la                        # Detailed listing (including hidden system files)
