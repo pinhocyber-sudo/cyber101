@@ -9,7 +9,7 @@
 
 ## 🎯 Learning Objectives
 - Secure Remote Administration: Execute remote management of Linux servers using the SSH (Secure Shell) protocol.
-- Advanced File System Management: Implement directory structures and manage data integrity through advanced CLI operations.
+- Core File System Management: Implement directory structures and manage data integrity through advanced CLI operations.
 - Access Control & Permissions: Analyze and configure the Linux permission model (rwx) to ensure the Principle of Least Privilege (PoLP).
 - System Investigation: Utilize manual pages (man) and file headers (file) to perform technical reconnaissance on unknown environments.
 
@@ -40,7 +40,7 @@ cp logs.txt /tmp/             # Data migration to volatile storage
 mv old_data.txt archival/     # File relocation and renaming
 rm -rf sensitive_data/        # Secure deletion of directory trees
 ```
-### Step 3 - [Advanced File System Administration]
+### Step 3 - [Core File System Administration]
 Understanding file attributes and switching user contexts to performe admnistrative tasks.
 ```bash
 ls -la                        # Detailed listing (including hidden system files)
