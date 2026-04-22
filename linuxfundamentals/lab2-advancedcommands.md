@@ -25,7 +25,7 @@
 ## 🛠️ Practical Application
 
 ### Step 1 - [Establishing Secure Remote Access]
-The primary method for server administration. SSH ensures that all data is transmited, including credentials, is encrypted.
+The primary method for server administration. SSH ensures that all data is transmitted, including credentials, is encrypted.
 ```bash
 #Syntax: ssh [user]@[ip address]
 ssh tryhackme@10.10.x.x
@@ -38,17 +38,17 @@ touch web_config.txt          # File creation
 mkdir -p internal/backups     # Recursive directory creation
 cp logs.txt /tmp/             # Data migration to volatile storage
 mv old_data.txt archival/     # File relocation and renaming
-rm -rf sensitive_data/        # Secure deletion of directory trees
+rm -rf sensitive_data/        # Recursive deletion (use with caution in production)
 ```
 ### Step 3 - [Core File System Administration]
-Understanding file attributes and switching user contexts to performe admnistrative tasks.
+Understanding file attributes and switching user contexts to perform administrative tasks.
 ```bash
 ls -la                        # Detailed listing (including hidden system files)
 chmod 600 private_key.pem     # Restricted access: Read/Write for owner only
 su -l specialist_user         # Switching user context with environment initialization
 ```
 ### Step 4 - [Directory Exploration]
-File types and standart Linux partitions for incident responses or system auditing.
+File types and standard Linux partitions for incident responses or system auditing.
 ```bash
 file unknown_binary           # Identifying file metadata without extensions
 cd /var/log                   # Investigating system and service logs
