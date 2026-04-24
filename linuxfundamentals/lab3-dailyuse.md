@@ -2,7 +2,7 @@
 
 **Platform:** TryHackMe  
 **Path:** Cyber101  
-**Module:** Linux Fundamentals
+**Module:** Linux Fundamentals  
 **Difficulty:** Easy  
 
 ---
