@@ -42,6 +42,8 @@ wget http://10.10.x.x/flag.txt     # Downloads a file from a web server
 python3 -m http.server 8000        # Starts a rapid-deployment web server on port 8000
 scp user@remote:/path/to/file .    # Securely copies files over the SSH protocol
 ```
+Practical Note:
+python3 -m http.server 8000 is insecure by design (requires no authentication), so it's useful just for internal lab environments
 
 ### Step 3 - [Backgrounding]
 Managing system load is crucial to ensure that long-running tasks do not lock the active terminal session, allowing for better multitasking and resource allocation.
@@ -52,15 +54,28 @@ top                           # Real-time system monitoring interface
 kill -15 [PID]                # Sends a SIGTERM for a clean process shutdown
 fg                            # Brings the most recent background task to the foreground
 ```
+Practical Note:
+SIGTERM allows cleanup, but some processes ignore SIGTERM and requires SIGKILL because it can be refused
 
 ### Step 4 - [Automation and System Maintenance]
 Keeping a system updated and auditing events is vital for system health. Automation via Cron ensures these critical tasks are performed consistently without manual intervention.
 
 ```bash
 crontab -e                    # Edits the scheduled tasks for the current user
-sudo apt update && upgrade    # Syncs repositories and applies security patches
+sudo apt update && sudo apt full-upgrade    # Syncs repositories and applies security patches
 ls /var/log/apache2/          # Locating web server logs (access.log and error.log)
 ```
+Crontab Format:
+```bash
+* * * * * command
+│ │ │ │ │
+│ │ │ │ └── day of week
+│ │ │ └──── month
+│ │ └────── day of month
+│ └──────── hour
+└────────── minute
+```
+
 ## Why it matters
-Stepping into these utilities is like the basic toolkit to a professional workstation, for anyone aiming for Security Operations (SOC) or Systems Administration, being comfortable with Nano and Vim is the ability of being able to fix a critical configuration when there’s no interface to help you. Pair that with the ability to move tools and data instantly via Python and SCP, and you gain the tactical agility needed to stay ahead in a fast-paced incident response or pentesting scenario. Furthermore, understanding the Process Lifecycle gives you total control over your environment’s health. Meanwhile, Crontab acts like your silent partner, helping you to handle the repetitive work of updates and log maintenance so you can focus on the bigger picture, allowing you to automate defenses and manage complex infrastructure with confidence.
+These tools form the operational baseline for Linux environments. In real-world systems administration and security work, they are not theoretical knowledge they are daily use primitives for debugging live systems, moving data in constrained environments, controlling system processes and automating repetitive operationals tasks.
 
