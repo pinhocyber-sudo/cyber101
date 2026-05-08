@@ -35,17 +35,17 @@ Practical Note: For a SOC Analyst, verifying the update history is essential dur
 ### Step 2 - [Real-Time Threat Detection]
 Microsoft Defender serves as the primary EDR/Antivirus solution. Key settings include:
 
-Real-time Protection: Actively monitors for malware execution.
-Automatic Sample Submission: Sends suspicious files to Microsoft's cloud for analysis, contributing to global threat intelligence.
+- Real-time Protection: Actively monitors for malware execution.
+- Automatic Sample Submission: Sends suspicious files to Microsoft's cloud for analysis, contributing to global threat intelligence.
 
 Key Insight: Utilizing "Controlled Folder Access" is a vital hardening step to prevent unauthorized applications (such as Ransomware) from modifying sensitive data in protected directories.
 
 ### Step 3 - [Network Hardening via Firewall Profiles]
 Windows Firewall applies different security postures based on the network environment, there is three profiles:
 
-Domain: When the host is the domain controller
-Public: Used to designate public networks
-Private: Most used in home network or designed private networks
+- Domain: When the host is the domain controller
+- Public: Used to designate public networks
+- Private: Most used in home network or designed private networks
 
 Practical Note: If an analyst detects C2 communication, the Windows Firewall advanced settings can be used to immediately block specific outbound ports or IP addresses.
 
@@ -55,4 +55,4 @@ BitLocker provides full-disk encryption, integrating with the TPM to ensure that
 Critical Knowledge: If a system lacks a TPM 1.2 or later, a physical USB startup key is required to enable BitLocker, highlighting the importance of hardware-based trust..
 
 ## Why it matters
-Mastering these Windows internal mechanisms is fundamental to modern incident response. It enables a SOC Analyst to rapidly isolate suspicious processes via Resource Monitor and identify stealthy persistence mechanisms within the Registry. Furthermore, it supports system hardening efforts by allowing for efficient resource management and service optimization, directly impacting an organization's security posture and operational uptime.
+Understanding the deep integration between Windows security software and hardware (TPM) is crucial for building a resilient infrastructure. These tools are key for effective Attack Surface Reduction (ASR), the ability to audit Patch Management status and configure Microsoft Defender’s Controlled Folder Access directly mitigates the risk of successful ransomware execution. Furthermore, the synergy between TPM hardware and BitLocker provides a hardware-rooted defense that mitigates data vulnerabilities found in legacy systems. Additionally, Volume Shadow Copies (VSS) allows for rapid system restoration, serving as a critical point-in-time recovery mechanism that complements an organization's backup strategy.
